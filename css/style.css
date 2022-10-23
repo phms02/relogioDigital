@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&');
+
+* {
+    font-family: "Poppins", Helvetica, sans-serif;
+    margin: 0;  /* O 'margin' é usado para criar espaços ao redor do elemento, fora de qualquer borda definida. Ou seja, define a distância das margens externas, isto é, das margens da página. */
+    padding: 0;  /* O 'padding' é usado para criar espaço ao redor do conteúdo de um elemento, dentro de qualquer borda definida. Ou seja, define a distância das bordas internas. */
+    box-sizing: border-box;  /* O 'border-box' faz com que o navegador não calcule a dimensão de um elemento somando bordas e margens com altura e largura. */
+}
+
+body {
+    align-items: center;  /* Alinhamento dos itens no centro. */
+    justify-content: center;  /* Alinhamento dos itens flexíveis no centro. */
+    background: #FFFFFF;
+    display: flex;  /* O 'display' especifica o tipo de caixa de renderização usada por um elemento - ou seja, é a forma de exibição de um elemento. O flexbox é uma serve para dispor os elementos dentro de um determinado container em linhas ou colunas, além de ser bastante flexível e permitir organizar os elementos horizontal ou verticalmente, com ou sem espaços entre eles, de tamanhos iguais ou diferentes. */
+    min-height: 100vh;  /* Definição da altura mínima. A medida vh é igual a 1/100 da altura da viewport. */
+}
+
+#clock h2 {
+    font-size: 0.8em;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    position: relative;  /* Quando atribuo o valor 'relative' ao atributo 'position', altero a posição de um elemento tendo como referência a posição inicial dele. Quando um elemento recebe esta propriedade, ele não muda de posição, pois já estrá posicionado em sua posição de referência. */
+    display: block;  /* Quando o 'display' recebe o 'block', o elemento que recebe esta atribuição é renderizado como bloco, tal como os parágrafos e os cabeçalhos o são. */
+    margin: 10px 0;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+}
+
+#clock #time {
+    display: flex;
+}
+
+#clock #time div {
+    margin: 0 5px;
+    position: relative;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+}
+
+#clock #time div span {
+    font-size: 3em;
+    font-weight: 300;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: black;
+    position: relative;
+    display: flex;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0,.2);
+    width: 200px;
+    height: 200px;
+    z-index: 10;  /* A propriedade 'z-index' especifica a ordem da pilha de um elemento de um anúncio. Um elemento com um número maior de empilhamentos tem preferência na exibição em relação ao elemento com um menor número de empilhamentos */
+}
+
+#clock #time div span:nth-child(2) {
+    height: 30px;
+    font-size: 0.7em;
+    font-weight: 500;
+    box-shadow: none;
+    background: #333333;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+#clock #time div:last-child span {
+    background: black ;
+}
+
+#clock #time div:last-child span:nth-child(2) {
+    background: #333333;
+}
